@@ -4,7 +4,7 @@ export default function MainNavbar () {
     return (
         
 <div>
-    <nav className="bg-theDarkBlue dark:bg-gray-800 shadow">
+    <nav className="bg-theDarkBlue dark:bg-gray-800 shadow rounded-lg">
         <div className="px-8 mx-auto max-w-7xl">
             <div className="flex items-center justify-between h-16">
                 <div className="w-full justify-between flex items-center">

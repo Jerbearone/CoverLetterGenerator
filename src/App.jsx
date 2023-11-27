@@ -8,10 +8,8 @@ import MainNavbar from './components/MainNavbar'
 function App() {
   return (
     <>
-      <div className='bg-theOffWhite p-8'>
-        <p className="text-3xl bg-theLightBrown p-4">Cover Letter Generator</p>
-        
-
+      <div className='bg-theOffWhite p-8 rounded-lg'>
+        <p className="text-3xl bg-theLightBrown p-4 rounded-lg mb-2">Cover Letter Generator</p>
         <BrowserRouter>
           <MainNavbar></MainNavbar>
           <Routes>
