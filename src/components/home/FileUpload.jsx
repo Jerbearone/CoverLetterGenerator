@@ -1,16 +1,9 @@
 import { useState, useEffect } from "react";
 import PdfReader from "./PDFReader";
 
-export default function FileUpload() {
+export default function FileUpload({extractedPdfText, setExtractedPdfText}) {
     const [resume, setResume] = useState(null);
-    const [resumeTextAreaContent, setResumeTextAreaContent] = useState("Resume Content")
-
-    const handleResumeUpload = async (e) => {
-        const selectedFile = await e.target.files[0];
-        setResume(selectedFile);
-        console.log(selectedFile)
-    }
-
+ 
     useEffect(()=> {
         const loadResumeText = async () => {
             if (resume) {
@@ -18,7 +11,6 @@ export default function FileUpload() {
                 reader.onload = async (e) => {
                     const resumeContent = e.target.result;
                     console.log('Resume: ', resumeContent);
-                    setResumeTextAreaContent(resumeContent);
                 }
                 reader.readAsText(resume);
             } else {
@@ -30,7 +22,7 @@ export default function FileUpload() {
 
     return (
         <div className="flex flex-col mt-10 text-lg items-center">
-            <PdfReader></PdfReader>
+            <PdfReader extractedPdfText={extractedPdfText} setExtractedPdfText={setExtractedPdfText}></PdfReader>
         </div>
     )
 }
