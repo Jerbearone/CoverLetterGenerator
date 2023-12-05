@@ -11,7 +11,7 @@ export default function Home () {
     const [responsibilitiesText, setResponsibilitiesText] = useState('');
     const [companyName, setCompanyName] = useState('');
     const [companyAddress, setCompanyAddress] = useState('');
-    const [hiringStaffName, setHiringStaffName] = useState('');
+    const [hiringStaffName, setHiringStaffName] = useState('Hiring Staff');
     return (
         <div className="w-full mt-2 justify-center bg-theBlue p-4 rounded-lg">
             <FileUpload extractedPdfText={extractedPdfText} setExtractedPdfText={setExtractedPdfText}></FileUpload>

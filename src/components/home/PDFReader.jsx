@@ -40,7 +40,7 @@ const PdfReader = ({extractedPdfText, setExtractedPdfText}) => {
           <div>
             <p>Page {numPages} of {numPages}</p>
           </div>
-          <textarea className='w-1/2 h-24 mt-10 p-4 border border-solid border-black cursor-text' value={extractedPdfText}></textarea>
+          <textarea className='w-1/2 h-24 mt-10 p-4 border border-solid border-black cursor-text rounded-lg' value={extractedPdfText}></textarea>
         </div>
       )}
     </div>

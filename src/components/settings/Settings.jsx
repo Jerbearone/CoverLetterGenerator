@@ -9,6 +9,7 @@ export default function Settings(){
     const [phoneNumber, setPhoneNumber] = useState("");
 
     const saveAllUserInfo = () => {
+        // save users settings via local storage
         setUserFirstName(firstName);
         setUserLasttName(lastName);
         setUserAddressOne(addressOne);
